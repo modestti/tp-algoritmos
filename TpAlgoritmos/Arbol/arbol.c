@@ -1,10 +1,10 @@
 #include "arbol.h"
 
-void crearArbol(t_arbol *pa)
+void crearArbol(tArbol *pa)
 {
     *pa = NULL;
 }
-void recorrerPreOrden(const t_arbol *pa, const void *param, Accion accion)
+void recorrerPreOrden(const tArbol *pa, const void *param, Accion accion)
 {
     if(!*pa)
         return;
@@ -20,7 +20,7 @@ void recorrerPreOrden(const t_arbol *pa, const void *param, Accion accion)
 //        recorrerPreOrden(&(*pa)->der, param, accion);
 //    }
 }
-void recorrerInOrden(const t_arbol *pa, const void *param, Accion accion)
+void recorrerInOrden(const tArbol *pa, const void *param, Accion accion)
 {
     if(!*pa)
         return;
@@ -29,7 +29,7 @@ void recorrerInOrden(const t_arbol *pa, const void *param, Accion accion)
     accion((*pa)->info, param);
     recorrerInOrden(&(*pa)->der, param, accion);
 }
-void recorrerPosOrden(const t_arbol *pa, const void *param, Accion accion)
+void recorrerPosOrden(const tArbol *pa, const void *param, Accion accion)
 {
     if(!*pa)
         return;
@@ -39,40 +39,40 @@ void recorrerPosOrden(const t_arbol *pa, const void *param, Accion accion)
     accion((*pa)->info, param);
 }
 
-int insertarEnArbol(t_arbol *pa, const void *info, size_t tam_info, Cmp cmp) /// NO INSERTO DUPLICADOS
+int insertarEnArbol(tArbol *pa, const void *info, size_t tamInfo, Cmp cmp) /// NO INSERTO DUPLICADOS
 {
     if(*pa)
     {
         if(cmp(info, (*pa)->info) > 0)
-            insertarEnArbol(&(*pa)->der, info, tam_info, cmp);
+            insertarEnArbol(&(*pa)->der, info, tamInfo, cmp);
         else if(cmp(info, (*pa)->info) < 0)
-            insertarEnArbol(&(*pa)->izq, info, tam_info, cmp);
+            insertarEnArbol(&(*pa)->izq, info, tamInfo, cmp);
     }
     else
     {
-        *pa = malloc(sizeof(t_nodo));
+        *pa = malloc(sizeof(tNodo));
         if(!*pa)
             return 0;/// sin mem
-        (*pa)->info = malloc(sizeof(tam_info));
+        (*pa)->info = malloc(sizeof(tamInfo));
         if(!(*pa)->info)
         {
             free(*pa);
             return 0;/// sin mem
         }
 
-        (*pa)->tam_info = tam_info;
-        memcpy((*pa)->info, info, tam_info);
+        (*pa)->tamInfo = tamInfo;
+        memcpy((*pa)->info, info, tamInfo);
         (*pa)->der = (*pa)->izq = NULL;
     }
     return 1;
 }
 
-int contarNodos(const t_arbol *pa)
+int contarNodos(const tArbol *pa)
 {
     return *pa == NULL ? 0 : (contarNodos(&(*pa)->izq) + contarNodos(&(*pa)->der) + 1);
 }
 
-void vaciarArbol(t_arbol *pa)
+void vaciarArbol(tArbol *pa)
 {
     if(!*pa)
         return;
@@ -84,27 +84,27 @@ void vaciarArbol(t_arbol *pa)
     *pa = NULL;
 }
 
-int buscarElemento(const t_arbol *pa, void *dato, size_t tam_info, Cmp cmp)
+int buscarElemento(const tArbol *pa, void *dato, size_t tamInfo, Cmp cmp)
 {
     pa = buscarNodo(pa, dato, cmp);
     if(!pa)
         return 0;
-    memcpy(dato, (*pa)->info, MINIMO(tam_info, (*pa)->tam_info));
+    memcpy(dato, (*pa)->info, MINIMO(tamInfo, (*pa)->tamInfo));
     return 1;
 }
 
-int eliminarElemento(t_arbol *pa, void *dato, size_t tam_info, Cmp cmp)
+int eliminarElemento(tArbol *pa, void *dato, size_t tamInfo, Cmp cmp)
 {
     pa = buscarNodo(pa, dato, cmp);
     if(!pa)
         return 0;
-    memcpy(dato, (*pa)->info, MINIMO(tam_info, (*pa)->tam_info));
+    memcpy(dato, (*pa)->info, MINIMO(tamInfo, (*pa)->tamInfo));
     return eliminarRaiz(pa);
 }
 
-int eliminarRaiz(t_arbol *pa)
+int eliminarRaiz(tArbol *pa)
 {
-    t_nodo **reemp, *elim;
+    tNodo **reemp, *elim;
 
     if(!*pa)
         return 0;
@@ -124,7 +124,7 @@ int eliminarRaiz(t_arbol *pa)
     elim = *reemp;
 
     (*pa)->info = elim->info;
-    (*pa)->tam_info = elim->tam_info;
+    (*pa)->tamInfo = elim->tamInfo;
 
     *reemp = elim->izq ? elim->izq : elim->der;
 
@@ -133,7 +133,7 @@ int eliminarRaiz(t_arbol *pa)
     return 1;
 }
 
-int alturaArbol(t_arbol *pa)
+int alturaArbol(tArbol *pa)
 {
     int hi, hd;
 
@@ -146,7 +146,7 @@ int alturaArbol(t_arbol *pa)
     return (hi>hd?hi:hd) + 1;
 }
 
-t_nodo **mayorNodo(t_arbol *pa)
+tNodo **mayorNodo(tArbol *pa)
 {
     if(!*pa)
         return 0;
@@ -154,10 +154,10 @@ t_nodo **mayorNodo(t_arbol *pa)
     while((*pa)->der)
         pa = &(*pa)->der;
 
-    return (t_nodo **)pa;
+    return (tNodo **)pa;
 }
 
-t_nodo **menorNodo(t_arbol *pa)
+tNodo **menorNodo(tArbol *pa)
 {
     if(!*pa)
         return 0;
@@ -165,10 +165,10 @@ t_nodo **menorNodo(t_arbol *pa)
     while((*pa)->izq)
         pa = &(*pa)->izq;
 
-    return (t_nodo **)pa;
+    return (tNodo **)pa;
 }
 
-t_nodo **buscarNodo(t_arbol *p, const void *dato, Cmp cmp)
+tNodo **buscarNodo(const tArbol *p, const void *dato, Cmp cmp)
 {
     int res;
     if(!*p)
@@ -179,38 +179,38 @@ t_nodo **buscarNodo(t_arbol *p, const void *dato, Cmp cmp)
     if(res<0)
         return buscarNodo(&(*p)->izq, dato, cmp);
 
-    return (t_nodo **)p;
+    return (tNodo **)p;
 }
 
-int crearArbolIndice(const char* ruta, t_arbol* a, unsigned tam_dato_reg, unsigned tam_clave, Cmp cmp, Accion accion)
+int crearArbolIndice(const char* ruta, tArbol* a, unsigned tamDatoReg, unsigned tamClave, Cmp cmp, Accion accion)
 {
-    char *dato_reg = malloc(tam_dato_reg);
-    if(!dato_reg)
+    char *datoReg = malloc(tamDatoReg);
+    if(!datoReg)
         return 0;
 
-    char *idx = malloc(tam_clave+sizeof(unsigned));
+    char *idx = malloc(tamClave+sizeof(unsigned));
     if(!idx)
         return 0;
 
     if(*a)
         return 0;
 
-    unsigned nro_reg = 0;
+    unsigned nroReg = 0;
     FILE* pf = fopen(ruta, "rb");
     if(!pf)
         return 0;
 
 
-    while(fread(dato_reg, tam_dato_reg, 1, pf))
+    while(fread(datoReg, tamDatoReg, 1, pf))
     {
-        accion(idx, dato_reg);///copia en idx la clave que esta dentro de dato_reg
-        memcpy(idx+tam_clave, &nro_reg, sizeof(unsigned));
-        insertarEnArbol(a, idx, tam_clave+sizeof(unsigned),cmp);
-        nro_reg++;
+        accion(idx, datoReg);///copia en idx la clave que esta dentro de dato_reg
+        memcpy(idx+tamClave, &nroReg, sizeof(unsigned));
+        insertarEnArbol(a, idx, tamClave+sizeof(unsigned),cmp);
+        nroReg++;
     }
 
     fclose(pf);
-    free(dato_reg);
+    free(datoReg);
 
     return 1;
 }

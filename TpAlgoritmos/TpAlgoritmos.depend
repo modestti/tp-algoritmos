@@ -47,3 +47,39 @@
 1782584792 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.c
 	"Utilitarias.h"
 
+1782534581 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.c
+	"indice.h"
+
+1782587425 c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.h
+	"../Arbol/arbol.h"
+	<stdio.h>
+	<stdlib.h>
+
+1782587233 c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.h
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1782584982 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\main.c
+	"Utilitarias.h"
+	"Arbol/arbol.h"
+	"Indice/indice.h"
+
+1782584982 c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.h
+	<stdio.h>
+	<stdlib.h>
+
+1782584982 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.c
+	"socio.h"
+
+1782584982 c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.h
+	<stdio.h>
+	<stdlib.h>
+
+1782584982 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.c
+	"Utilitarias.h"
+
+1782587264 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.c
+	"arbol.h"
+

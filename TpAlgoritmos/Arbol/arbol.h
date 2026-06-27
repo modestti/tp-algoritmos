@@ -8,37 +8,37 @@
 
 #define MINIMO(x,y) (x<y?x:y)
 
-typedef struct s_nodo
+typedef struct sNodo
 {
     void *info;
-    size_t tam_info;
-    struct s_nodo *izq, *der;
-}t_nodo;
+    size_t tamInfo;
+    struct sNodo *izq, *der;
+}tNodo;
 
-typedef t_nodo* t_arbol;
+typedef tNodo* tArbol;
 
 typedef void (*Accion)(const void *, const void *);
 typedef int (*Cmp)(const void *d, const void *);
 
-void crearArbol(t_arbol *pa);
-void recorrerPreOrden(const t_arbol *pa, const void *param, Accion accion);
-void recorrerInOrden(const t_arbol *pa, const void *param, Accion accion);
-void recorrerPosOrden(const t_arbol *pa, const void *param, Accion accion);
+void crearArbol(tArbol *pa);
+void recorrerPreOrden(const tArbol *pa, const void *param, Accion accion);
+void recorrerInOrden(const tArbol *pa, const void *param, Accion accion);
+void recorrerPosOrden(const tArbol *pa, const void *param, Accion accion);
 
-int insertarEnArbol(t_arbol *pa, const void *info, size_t tam_info, Cmp cmp);
-int contarNodos(const t_arbol *pa);
+int insertarEnArbol(tArbol *pa, const void *info, size_t tamInfo, Cmp cmp);
+int contarNodos(const tArbol *pa);
 
-int buscarElemento(const t_arbol *pa, void *dato, size_t tam_info, Cmp cmp);
-int eliminarElemento(t_arbol *pa, void *dato, size_t tam_info, Cmp cmp);
+int buscarElemento(const tArbol *pa, void *dato, size_t tamInfo, Cmp cmp);
+int eliminarElemento(tArbol *pa, void *dato, size_t tamInfo, Cmp cmp);
 
-int eliminarRaiz(t_arbol *pa);
-int alturaArbol(t_arbol *pa);
-t_nodo **mayorNodo(t_arbol *pa);
-t_nodo **menorNodo(t_arbol *pa);
-t_nodo **buscarNodo(t_arbol *p, const void *dato, Cmp cmp);
+int eliminarRaiz(tArbol *pa);
+int alturaArbol(tArbol *pa);
+tNodo **mayorNodo(tArbol *pa);
+tNodo **menorNodo(tArbol *pa);
+tNodo **buscarNodo(const tArbol *p, const void *dato, Cmp cmp);
 
-void vaciarArbol(t_arbol *pa);
+void vaciarArbol(tArbol *pa);
 
-int crearArbolIndice(const char* ruta, t_arbol* a, unsigned tam_dato_reg, unsigned tam_clave, Cmp cmp, Accion accion);
+int crearArbolIndice(const char* ruta, tArbol* a, unsigned tamDatoReg, unsigned tamClave, Cmp cmp, Accion accion);
 
 #endif // ARBOL_H_INCLUDED

@@ -1,33 +1,33 @@
 #include "indice.h"
-void ind_crear (t_indice* ind, size_t tam_clave, int (*cmp)(const void*, const void*))
+void indCrear (tIndice* ind, size_t tamClave, int (*cmp)(const void*, const void*))
 {
 
 }
-int ind_insertar (t_indice* ind, void *clave, unsigned nro_reg)
+int indInsertar (tIndice* ind, void *clave, unsigned nroReg)
 {
 
 }
-int ind_eliminar (t_indice* ind, void *clave, unsigned *nro_reg)
+int indEliminar (tIndice* ind, void *clave, unsigned *nroReg)
 {
 
 }
-int ind_buscar (const t_indice* ind, void *clave, unsigned *nro_reg)
+int indBuscar (const tIndice* ind, void *clave, unsigned *nroReg)
 {
 
 }
-int ind_cargar (t_indice* ind, const char* path)
+int indCargar (tIndice* ind, const char* path)
 {
 
 }
-int ind_grabar (const t_indice* ind, const char* path)
+int indGrabar (const tIndice* ind, const char* path)
 {
 
 }
-void ind_vaciar (t_indice* ind)
+void indVaciar (tIndice* ind)
 {
 
 }
-int ind_recorrer (const t_indice* ind, void (*accion)(const void *, unsigned, void *), void*param)
+int indRecorrer (const tIndice* ind, void (*accion)(const void *, unsigned, void *), void*param)
 {
 
 }
