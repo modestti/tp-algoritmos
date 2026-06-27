@@ -1,8 +1,8 @@
 #include "Utilitarias.h"
 
-generarArchivoBinDesdeArchivoTxt(const char *pathTxt)
+int generarArchivoBinDesdeArchivoTxt(char *pathTxt)
 {
-    char[TAM_LINEA] linea;
+    char linea[TAM_LINEA];
     FILE* pTxt = fopen(pathTxt, "rt");
 
     if(pTxt == NULL)
@@ -13,5 +13,5 @@ generarArchivoBinDesdeArchivoTxt(const char *pathTxt)
     if(pBin == NULL)
         return ERROR_ARCH;
 
-    fget(linea, )
+    //fget(linea, )
 }

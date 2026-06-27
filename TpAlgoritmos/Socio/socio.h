@@ -6,27 +6,40 @@
 
 #define TAM_APYNOM 60
 #define TAM_CATEG 10
+
+#define TRUE 1
+#define FALSE 0
+#define ERROR_FECHABAJA 0
+#define VALIDADO 1
+
 typedef struct
 {
-    int d;
-    int m;
-    int a;
-}t_fecha
+    int dia;
+    int mes;
+    int anio;
+}tFecha;
 
 typedef struct
 {
     unsigned long dni;
     char apellidos[TAM_APYNOM];
     char nombres[TAM_APYNOM];
-    t_fecha fechaNacimiento;
+    tFecha fechaNacimiento;
     char sexo;
-    t_fecha fechaAfiliacion;
+    tFecha fechaAfiliacion;
     char categoria[TAM_CATEG];
-    t_fecha fechaUltCuoPaga;
+    tFecha fechaUltCuoPaga;
     char estado;
-    t_fecha fechaBaja;
+    tFecha fechaBaja;
 
-}t_socio;
+}tSocio;
+
+
+//VALIDACIONES
+int cantDias(int mes, int anio);
+int anioBisiesto(int anio);
+int validarFecha(tFecha fecha);
+int fechaBaja (const tFecha f_baja);
 
 
 

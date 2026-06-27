@@ -1,6 +1,7 @@
 #ifndef INDICE_H_INCLUDED
 #define INDICE_H_INCLUDED
-#include "arbol.h"
+
+#include "../Arbol/arbol.h"
 #include <stdio.h>
 #include <stdlib.h>
 

@@ -8,6 +8,11 @@
 #define TAM_LINEA 200
 #define TAM 30
 
-generarArchivoBinDesdeArchivoTxt(char *pathTxt);
+
+int generarArchivoBinDesdeArchivoTxt(char *pathTxt);
+
+//MENU
+
+
 
 #endif // UTILITARIAS_H_INCLUDED

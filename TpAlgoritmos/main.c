@@ -1,13 +1,13 @@
 #include "Utilitarias.h"
-#include "arbol.h"
-#include "indice.h"
+#include "Arbol/arbol.h"
+#include "Indice/indice.h"
 int main()
 {
-    char[TAM] path;
+    char path[TAM] ;
     printf("Ingrese el path(ruta de acceso) del archivo");
     scanf("%s", path);
     generarArchivoBinDesdeArchivoTxt(path);
-    generarIndice()
+    //generarIndice();
 
     printf("Hello world!\n");
     return 0;

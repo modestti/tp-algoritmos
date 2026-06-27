@@ -18,3 +18,32 @@
 	<stdio.h>
 	<string.h>
 
+1782583926 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.c
+	"arbol.h"
+
+1782583926 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.h
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1782584721 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\main.c
+	"Utilitarias.h"
+	"Arbol/arbol.h"
+	"Indice/indice.h"
+
+1782584492 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.h
+	<stdio.h>
+	<stdlib.h>
+
+1782583926 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.c
+	"indice.h"
+
+1782584467 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.h
+	"../Arbol/arbol.h"
+	<stdio.h>
+	<stdlib.h>
+
+1782584792 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.c
+	"Utilitarias.h"
+
