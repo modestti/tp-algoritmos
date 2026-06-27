@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1782497737 source:c:\users\familia cruz\desktop\algoritmo\tpalgoritmos\main.c
+	"Utilitarias.h"
+
+1782497737 c:\users\familia cruz\desktop\algoritmo\tpalgoritmos\utilitarias.h
+	<stdio.h>
+	<stdlib.h>
+
+1782497737 source:c:\users\familia cruz\desktop\algoritmo\tpalgoritmos\utilitarias.c
+	"Utilitarias.h"
+
+1782514254 source:c:\users\familia cruz\desktop\algoritmo\tpalgoritmos\arbol\arbol.c
+	"arbol.h"
+
+1782514254 c:\users\familia cruz\desktop\algoritmo\tpalgoritmos\arbol\arbol.h
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
