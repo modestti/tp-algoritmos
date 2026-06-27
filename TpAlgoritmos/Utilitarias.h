@@ -3,13 +3,16 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "Socio/socio.h"
 
 #define ERROR_ARCH 0
-#define TAM_LINEA 200
-#define TAM 30
+#define TODO_BIEN 1
+#define TAM_LINEA 500
+#define TAM_PATH 100
+#define pathBin "socio.dat"
 
 
-int generarArchivoBinDesdeArchivoTxt(char *pathTxt);
+int generarArchivoBinDesdeArchivoTxt(const char *pathTxt);
 
 
 

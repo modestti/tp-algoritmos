@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
+#include <time.h>
 
 #define TAM_APYNOM 60
 #define TAM_CATEG 10
@@ -48,14 +50,17 @@ typedef struct
 }tSocio;
 
 
+
 //VALIDACIONES FECHA
 int cantDias(int mes, int anio);
 int anioBisiesto(int anio);
 int validarFecha(tFecha fecha);
 int fechaBaja (const tFecha f_baja);
-int fechaAfiliacion (tFecha afiliacion);
-int fechaNacimiento(tFecha nac);
-int ultCuota (tFecha ultc);
+int fechaAfiliacion (const tFecha afiliacion);
+int fechaNacimiento(const tFecha nac);
+int ultCuota (const tFecha ultc);
+int compararFechas(const void *f1, const void *f2);
+
 
 
 //VALIDACIONES SOCIO
@@ -65,5 +70,5 @@ void strtoupper(char *str);
 int categoria(char* cat);
 int dni(long id);
 int validarUnaPalabra(char *cadena, int tam);
-
+void normalizarCadena(char *cadena);
 #endif // SOCIO_H_INCLUDED

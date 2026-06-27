@@ -49,7 +49,7 @@
 
 1782584792 ated upstream
 
-1782534581 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.c
+1782587425 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.c
 	"indice.h"
 
 1782587425 c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.h
@@ -57,32 +57,37 @@
 	<stdio.h>
 	<stdlib.h>
 
-1782587233 c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.h
+1782588270 c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.h
 	<string.h>
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
 
-1782584982 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\main.c
+1782596401 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\main.c
 	"Utilitarias.h"
 	"Arbol/arbol.h"
 	"Indice/indice.h"
+	"Socio/socio.h"
 
-1782584982 c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.h
+1782596679 c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.h
 	<stdio.h>
 	<stdlib.h>
+	"Socio/socio.h"
 
-1782584982 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.c
+1782593312 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.c
 	"socio.h"
 
-1782584982 c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.h
+1782600812 c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.h
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<time.h>
 
-1782584982 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.c
+1782600812 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.c
 	"Utilitarias.h"
 
-1782587264 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.c
+1782588270 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.c
 	"arbol.h"
 
 1782587264 

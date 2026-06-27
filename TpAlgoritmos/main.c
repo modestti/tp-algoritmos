@@ -1,14 +1,17 @@
 #include "Utilitarias.h"
 #include "Arbol/arbol.h"
 #include "Indice/indice.h"
+#include "Socio/socio.h"
 int main()
 {
-    char path[TAM] ;
-    printf("Ingrese el path(ruta de acceso) del archivo");
-    scanf("%s", path);
-    generarArchivoBinDesdeArchivoTxt(path);
-    //generarIndice();
+    char path[TAM_PATH];
+    printf("Ingrese la ruta de acceso del archivo socios:");
+    fflush(stdin);
+    gets(path);
 
-    printf("Hello world!\n");
+    generarArchivoBinDesdeArchivoTxt(path);
+
+
+
     return 0;
 }
