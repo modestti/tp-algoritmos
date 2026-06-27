@@ -1,7 +1,7 @@
 #include "socio.h"
 
 
-//VALIDACIONES
+//VALIDACIONES FECHA
 int cantDias(int mes, int anio){
     static int meses[12] = {31,28,31,30,31,31,30,31,30,31,30,31};
 
@@ -26,4 +26,73 @@ int validarFecha(tFecha fecha){
 
 int fechaBaja (const tFecha f_baja){
     return validarFecha(f_baja) ? VALIDADO : ERROR_FECHABAJA;
+}
+
+
+int fechaAfiliacion (tFecha afiliacion){
+    return validarFecha(afiliacion) ? VALIDADO : ERROR_AFILIACION;
+}
+
+int fechaNacimiento(tFecha nac){
+    return validarFecha(nac) ? VALIDADO : ERROR_FECHANACIMIENTO;
+}
+
+int ultCuota (tFecha ultc){
+    return validarFecha(ultc) ? VALIDADO : ERROR_FECHAULTCUOTA;
+}
+
+
+//VALIDACIONES SOCIO
+int sexo (char s){
+    s = TOUPPER(s);
+    return SEXO_VALIDO(s) ? VALIDADO : ERROR_SEXO;
+}
+
+
+int estado (char e){
+    e = TOUPPER(e);
+    return ESTADO_VALIDO(e) ? VALIDADO : ERROR_ESTADO;
+}
+
+
+void strtoupper(char *str){
+    while(*str){
+        *str = TOUPPER(*str);
+        str++;
+    }
+}
+
+int categoria(char* cat){
+    const char* opc[] ={"MENOR", "CADETE", "ADULTO","VITALICIO", "HONORARIO", "JUBILADO"};
+    strtoupper(cat);
+    for(int i=0;i<6;i++){
+        if(strcmp(cat, opc[i])==0)
+            return VALIDADO;
+    }
+    return ERROR_CATEGORIA;
+}
+
+
+int dni(long id){
+    return (id>10000 && id<100000000)? VALIDADO : ERROR_DNI;
+}
+
+
+int validarUnaPalabra(char *cadena, int tam){
+    int i= 0;
+    int encontradoLetra=0;
+    int encontradoFin=0;
+    while(i<tam&&encontradoFin==0){
+        if(cadena[i] == '\0'){
+            encontradoFin = 1;
+        }
+        else{
+            if(!ES_LETRA(cadena[i]))
+                return FALSE;
+
+            encontradoLetra = 1;
+        }
+        i++;
+    }
+    return (encontradoLetra == 1 && encontradoFin == 1) ? TRUE : FALSE;
 }

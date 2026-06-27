@@ -18,10 +18,10 @@
 	<stdio.h>
 	<string.h>
 
-1782583926 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.c
+1782585605 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.c
 	"arbol.h"
 
-1782583926 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.h
+1782585614 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.h
 	<string.h>
 	<stdlib.h>
 	<stdio.h>
@@ -47,6 +47,7 @@
 1782584792 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.c
 	"Utilitarias.h"
 
+<<<<<<< Updated upstream
 1782534581 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.c
 	"indice.h"
 
@@ -83,3 +84,12 @@
 1782587264 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.c
 	"arbol.h"
 
+=======
+1782584414 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.c
+	"socio.h"
+
+1782584908 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.h
+	<stdio.h>
+	<stdlib.h>
+
+>>>>>>> Stashed changes

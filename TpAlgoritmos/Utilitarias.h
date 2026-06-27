@@ -11,7 +11,6 @@
 
 int generarArchivoBinDesdeArchivoTxt(char *pathTxt);
 
-//MENU
 
 
 

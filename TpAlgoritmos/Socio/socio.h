@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define TAM_APYNOM 60
 #define TAM_CATEG 10
@@ -10,7 +11,19 @@
 #define TRUE 1
 #define FALSE 0
 #define ERROR_FECHABAJA 0
+#define ERROR_SEXO 0
+#define ERROR_ESTADO 0
+#define ERROR_AFILIACION 0
+#define ERROR_CATEGORIA 0
+#define ERROR_FECHANACIMIENTO 0
+#define ERROR_DNI 0
+#define ERROR_FECHAULTCUOTA 0
 #define VALIDADO 1
+
+#define TOUPPER(X) (((X) >= 'a' && (X) <= 'z') ? (X) - 32 :(X))
+#define ES_LETRA(c) (((c) >= 'A' && (c) <= 'Z') || ((c) >= 'a' && (c) <= 'z'))
+#define SEXO_VALIDO(c) ((c)=='M'||(c)=='F'||(c)=='O')
+#define ESTADO_VALIDO(c) ((c)=='A'||(c)=='I')
 
 typedef struct
 {
@@ -35,12 +48,22 @@ typedef struct
 }tSocio;
 
 
-//VALIDACIONES
+//VALIDACIONES FECHA
 int cantDias(int mes, int anio);
 int anioBisiesto(int anio);
 int validarFecha(tFecha fecha);
 int fechaBaja (const tFecha f_baja);
+int fechaAfiliacion (tFecha afiliacion);
+int fechaNacimiento(tFecha nac);
+int ultCuota (tFecha ultc);
 
 
+//VALIDACIONES SOCIO
+int sexo (char s);
+int estado (char e);
+void strtoupper(char *str);
+int categoria(char* cat);
+int dni(long id);
+int validarUnaPalabra(char *cadena, int tam);
 
 #endif // SOCIO_H_INCLUDED
