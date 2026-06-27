@@ -168,11 +168,7 @@ tNodo **menorNodo(tArbol *pa)
     return (tNodo **)pa;
 }
 
-<<<<<<< Updated upstream
 tNodo **buscarNodo(const tArbol *p, const void *dato, Cmp cmp)
-=======
-t_nodo **buscarNodo(const t_arbol *p, const void *dato, Cmp cmp)
->>>>>>> Stashed changes
 {
     int res;
     if(!*p)

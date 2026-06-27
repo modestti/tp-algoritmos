@@ -21,7 +21,7 @@
 1782585605 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.c
 	"arbol.h"
 
-1782585614 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.h
+1782588214 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.h
 	<string.h>
 	<stdlib.h>
 	<stdio.h>
@@ -32,14 +32,14 @@
 	"Arbol/arbol.h"
 	"Indice/indice.h"
 
-1782584492 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.h
+1782587631 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.h
 	<stdio.h>
 	<stdlib.h>
 
-1782583926 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.c
+1782587566 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.c
 	"indice.h"
 
-1782584467 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.h
+1782587566 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.h
 	"../Arbol/arbol.h"
 	<stdio.h>
 	<stdlib.h>
@@ -47,7 +47,8 @@
 1782584792 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.c
 	"Utilitarias.h"
 
-<<<<<<< Updated upstream
+1782584792 ated upstream
+
 1782534581 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.c
 	"indice.h"
 
@@ -84,12 +85,15 @@
 1782587264 source:c:\users\familia cruz\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.c
 	"arbol.h"
 
-=======
-1782584414 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.c
+1782587264 
+
+1782588123 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.c
 	"socio.h"
 
-1782584908 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.h
+1782588123 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.h
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 
->>>>>>> Stashed changes
+1782584908 shed changes
+

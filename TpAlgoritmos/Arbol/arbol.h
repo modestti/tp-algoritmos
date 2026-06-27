@@ -31,19 +31,11 @@ int contarNodos(const tArbol *pa);
 int buscarElemento(const tArbol *pa, void *dato, size_t tamInfo, Cmp cmp);
 int eliminarElemento(tArbol *pa, void *dato, size_t tamInfo, Cmp cmp);
 
-<<<<<<< Updated upstream
 int eliminarRaiz(tArbol *pa);
 int alturaArbol(tArbol *pa);
 tNodo **mayorNodo(tArbol *pa);
 tNodo **menorNodo(tArbol *pa);
 tNodo **buscarNodo(const tArbol *p, const void *dato, Cmp cmp);
-=======
-int eliminarRaiz(t_arbol *pa);
-int alturaArbol(t_arbol *pa);
-t_nodo **mayorNodo(t_arbol *pa);
-t_nodo **menorNodo(t_arbol *pa);
-t_nodo **buscarNodo(const t_arbol *p, const void *dato, Cmp cmp);
->>>>>>> Stashed changes
 
 void vaciarArbol(tArbol *pa);
 
