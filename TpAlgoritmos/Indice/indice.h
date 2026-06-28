@@ -2,15 +2,25 @@
 #define INDICE_H_INCLUDED
 
 #include "../Arbol/arbol.h"
+#include "../Socio/socio.h"
 #include <stdio.h>
 #include <stdlib.h>
+
+#define OK 1
+#define ERROR 0
+
+typedef struct{
+    tArbol arb;
+    unsigned tamClave;
+    int (*Cmp) (const void* a, const void *b);
+}tIndice;
 
 typedef struct
 {
     void* clave;
     unsigned nroReg;
 
-}tIndice;
+}tRegistroIndice;
 
 void indCrear (tIndice* ind, size_t tamClave, int (*cmp)(const void*, const void*));
 int indInsertar (tIndice* ind, void *clave, unsigned nroReg);

@@ -164,7 +164,26 @@ void normalizarCadena(char *cadena)
     }
 
     *cursorEscribir = '\0';
-
-
 }
 
+//COMPARACIONES
+int compararFechas(const void *f1, const void *f2)
+{
+    const tFecha *fp = (const tFecha *)f1;
+    const tFecha *fs = (const tFecha *)f2;
+
+    if (fp->anio != fs->anio)
+        return fp->anio > fs->anio ? 1 : -1;
+    if (fp->mes != fs->mes)
+        return fp->mes > fs->mes ? 1 : -1;
+    if (fp->dia != fs->dia)
+        return fp->dia > fs->dia ? 1 : -1;
+    return 0;
+}
+
+int compararDni(const void *d1, const void *d2){
+    tSocio* s1 = (tSocio*) d1;
+    tSocio* s2 = (tSocio*) d2;
+
+    return s1->dni-s2->dni;
+}

@@ -18,7 +18,7 @@
 	<stdio.h>
 	<string.h>
 
-1782585605 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.c
+1782659293 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.c
 	"arbol.h"
 
 1782588214 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\arbol\arbol.h
@@ -27,24 +27,27 @@
 	<stdio.h>
 	<string.h>
 
-1782584721 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\main.c
+1782657643 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\main.c
 	"Utilitarias.h"
 	"Arbol/arbol.h"
 	"Indice/indice.h"
+	"Socio/socio.h"
 
-1782587631 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.h
+1782657643 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.h
 	<stdio.h>
 	<stdlib.h>
+	"Socio/socio.h"
 
-1782587566 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.c
+1782660464 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.c
 	"indice.h"
 
-1782587566 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.h
+1782661158 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\indice\indice.h
 	"../Arbol/arbol.h"
+	"../Socio/socio.h"
 	<stdio.h>
 	<stdlib.h>
 
-1782584792 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.c
+1782657643 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\utilitarias.c
 	"Utilitarias.h"
 
 1782584792 ated upstream
@@ -92,13 +95,15 @@
 
 1782587264 
 
-1782588123 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.c
+1782660010 source:c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.c
 	"socio.h"
 
-1782588123 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.h
+1782659293 c:\users\tomas\documents\github\tp-algoritmos\tpalgoritmos\socio\socio.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	<ctype.h>
+	<time.h>
 
 1782584908 shed changes
 

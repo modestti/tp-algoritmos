@@ -4,6 +4,7 @@ void crearArbol(tArbol *pa)
 {
     *pa = NULL;
 }
+
 void recorrerPreOrden(const tArbol *pa, const void *param, Accion accion)
 {
     if(!*pa)
@@ -12,14 +13,8 @@ void recorrerPreOrden(const tArbol *pa, const void *param, Accion accion)
     accion((*pa)->info, param);
     recorrerPreOrden(&(*pa)->izq, param, accion);
     recorrerPreOrden(&(*pa)->der, param, accion);
-
-//    if(*pa)
-//    {
-//        accion((*pa)->info, param);
-//        recorrerPreOrden(&(*pa)->izq, param, accion);
-//        recorrerPreOrden(&(*pa)->der, param, accion);
-//    }
 }
+
 void recorrerInOrden(const tArbol *pa, const void *param, Accion accion)
 {
     if(!*pa)
@@ -29,6 +24,7 @@ void recorrerInOrden(const tArbol *pa, const void *param, Accion accion)
     accion((*pa)->info, param);
     recorrerInOrden(&(*pa)->der, param, accion);
 }
+
 void recorrerPosOrden(const tArbol *pa, const void *param, Accion accion)
 {
     if(!*pa)

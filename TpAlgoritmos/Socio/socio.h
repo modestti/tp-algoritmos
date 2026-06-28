@@ -71,4 +71,8 @@ int categoria(char* cat);
 int dni(long id);
 int validarUnaPalabra(char *cadena, int tam);
 void normalizarCadena(char *cadena);
+
+//COMPARACIONES
+int compararFechas(const void *f1, const void *f2);
+int compararDni(const void *d1, const void *d2);
 #endif // SOCIO_H_INCLUDED
